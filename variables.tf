@@ -25,13 +25,25 @@ variable "web_app_sg_name" {
   type = string
 }
 
+variable "connected_to_rds_web_app_sg_name" {
+  type = string
+}
+
 variable "db_sg_name" {
+  type = string
+}
+
+variable "lb_sg_name" {
   type = string
 }
 
 
 # ec2 instances
 variable "ami" {
+  type = string
+}
+
+variable "iam_instance_profile" {
   type = string
 }
 
@@ -42,9 +54,9 @@ variable "db_name" {
   type = string
 }
 
-/* variable "db_identifier" {
+variable "db_identifier" {
   type = string
-} */
+} 
 
 variable "db_username" {
   type = string
@@ -58,3 +70,6 @@ variable "db_password" {
 variable "cloud9_ec2_image_id" {
   type = string
 }
+
+
+# alb(application load balancer)

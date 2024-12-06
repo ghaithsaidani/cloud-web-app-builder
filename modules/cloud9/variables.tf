@@ -5,3 +5,7 @@ variable "project_name" {
 variable "cloud9_ec2_image_id" {
   type = string
 }
+
+variable "subnet_id" {
+  type = string
+}
