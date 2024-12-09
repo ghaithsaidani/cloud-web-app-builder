@@ -35,21 +35,21 @@ The infrastructure consists of the following AWS components:
 
 
 ## 📦 Module Structure
-
+```
 cloud-web-app-builder/
-├── [main.tf](main.tf)                  # Main configuration file
-├── [variables.tf](variables.tf)          # Variable declarations
-├── [providers.tf](providers.tf)             # Output declarations
+├── main.tf                 # Main configuration file
+├── variables.tf         # Variable declarations
+├── providers.tf             # Output declarations
 ├── modules/
-│   ├── [vpc/](modules/vpc/main.tf)              # VPC configuration
-│   ├── [security_groups/](modules/security_groups/main.tf)  # Security group configurations
-│   ├── [ec2/](modules/ec2/main.tf)             # EC2 instance configurations
-│   ├── [rds/](modules/rds/main.tf)             # RDS database setup
-│   ├── [cloud9/](modules/cloud9/main.tf)          # Cloud9 environment
-│   ├── [alb/](modules/alb/main.tf)             # Load balancer configuration
-│   └── [auto-scaling/](modules/auto-scalling/main.tf)    # Auto scaling configuration
+│   ├── vpc/            # VPC configuration
+│   ├── security_groups/  # Security group configurations
+│   ├── ec2/             # EC2 instance configurations
+│   ├── rds/             # RDS database setup
+│   ├── cloud9/       # Cloud9 environment
+│   ├── alb/          # Load balancer configuration
+│   └── auto-scaling/    # Auto scaling configuration
 └── scripts/            # User data scripts
-
+```
 ## 🚀 Quick Start
 
 ### Prerequisites
