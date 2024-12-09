@@ -55,3 +55,15 @@ module "alb" {
   security_group = module.sg.lb_sg_id
   subnets = module.vpc.public_subnet_ids
 }
+
+module "auto_scalling" {
+  source = "./modules/auto-scalling"
+  project_name = var.project_name
+  image_id = module.ec2.ami_id
+  key_name = module.ec2.key_name
+  user_data = data.template_file.user_data_phase3.rendered
+  iam_instance_profile = var.iam_instance_profile
+  security_group = module.sg.connected_to_rds_web_app_sg_id
+  subnets = module.vpc.public_subnet_ids
+  target_group_arn = module.alb.target_group_arn
+}

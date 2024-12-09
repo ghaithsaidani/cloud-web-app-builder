@@ -33,3 +33,9 @@ resource "aws_instance" "ec2_connected_to_rds" {
     Name = "${var.project_name}-instance-phase3"
   }
 }
+
+
+resource "aws_ami_from_instance" "ami" {
+  name = "${var.project_name}-ami"
+  source_instance_id = aws_instance.ec2_connected_to_rds.id
+}
